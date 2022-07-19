@@ -4,7 +4,7 @@ import { Calendar as CustomCalendar } from "react-native-calendars";
 
 export function Calendar() {
   return (
-    <Calendar
+    <CustomCalendar
       // Collection of dates that have to be marked. Default = {}
       markedDates={{
         "2012-05-16": { selected: true, marked: true, selectedColor: "blue" },

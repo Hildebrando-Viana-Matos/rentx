@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 
 import theme from "./src/styles/theme";
 
-import { Scheduling } from "./src/screens/Scheduling";
+import { SchedulingDetails } from "./src/screens/SchedulingDetails";
 
 import {
   useFonts,
@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Scheduling />
+      <SchedulingDetails />
     </ThemeProvider>
   );
 }

@@ -6,7 +6,9 @@ import { ThemeProvider } from "styled-components";
 
 import theme from "./src/styles/theme";
 
-import { SchedulingComplete } from "./src/screens/SchedulingComplete";
+import "@react-navigation/stack";
+
+import { Routes } from "./src/routes";
 
 import {
   useFonts,
@@ -35,7 +37,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SchedulingComplete />
+      <Routes />
     </ThemeProvider>
   );
 }

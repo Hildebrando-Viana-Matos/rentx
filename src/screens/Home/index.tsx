@@ -22,19 +22,8 @@ export function Home() {
 
   const navigation = useNavigation();
 
-  const carData = {
-    brand: "AUDI",
-    name: "RS 5 Coupé",
-    rent: {
-      period: "AO DIA",
-      price: 120,
-    },
-    thumbnail:
-      "https://www.audi.ca/content/dam/nemo/ca/Models/rs5/rs5-coupe/MY2020/844x476_rs5coupe-min.png",
-  };
-
-  function handleCarDetails() {
-    navigation.navigate("CarDetails");
+  function handleCarDetails(car: CarDTO) {
+    navigation.navigate("CarDetails", { car });
   }
 
   useEffect(() => {
@@ -74,7 +63,7 @@ export function Home() {
           data={cars}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <Car onPress={handleCarDetails} data={item} />
+            <Car onPress={() => handleCarDetails(item)} data={item} />
           )}
         />
       )}
